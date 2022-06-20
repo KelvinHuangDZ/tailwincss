@@ -1,0 +1,86 @@
+:root {
+    --mq-checkbox-container-width-height: 40px;
+}
+
+.mq-checkbox {
+
+    &__container {
+        display: inline-block;
+        height: var(--mq-checkbox-container-width-height);
+        width: var(--mq-checkbox-container-width-height);
+        line-height: 0;
+        margin: auto;
+        order: 0;
+        vertical-align: middle;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
+
+    &__outline {
+        position: relative;
+        top: calc(var(--mq-checkbox-width-height) * -1);
+        height: var(--mq-checkbox-container-width-height);
+        width: var(--mq-checkbox-container-width-height);
+        border-radius: 50%;
+    }
+
+    &__input {
+        position: relative;
+        top: 13px;
+        left: 11px;
+        width: var(--mq-checkbox-width-height);
+        height: var(--mq-checkbox-width-height);
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+
+        &:focus:after {
+            border-color: var(--mq-color-blue100);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: var(--mq-checkbox-width-height);
+            height: var(--mq-checkbox-width-height);
+            margin-top: -2px;
+            margin-right: 5px;
+            border: 1px solid var(--mq-color-grey30);
+            background-color: var(--mq-color-white);
+            border-radius: 2px;
+            transition: 240ms;
+        }
+
+        &:hover::after {
+            border-color: var(--mq-color-blue100);
+        }
+
+        &:checked::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5px;
+            display: table;
+            width: 6px;
+            height: 10px;
+            border: 2px solid var(--mq-color-white);
+            border-top-width: 0;
+            border-left-width: 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        &:checked::after {
+            border-color: var(--mq-color-blue100);
+            background-color: var(--mq-color-blue100);
+        }
+    }
+
+    &__input:hover + div {
+        background-color: var(--mq-checkbox-hover-background-color);
+        cursor: pointer;
+    }
+}

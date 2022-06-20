@@ -1,0 +1,43 @@
+@import './mq-type.mixins.scss';
+
+.mq-badge {
+    background-color: var(--mq-color-grey100);
+    border-radius: calc(var(--mq-space-base) * 0.5);
+    color: var(--mq-color-white);
+    padding: 0px var(--mq-space-base);
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &--grey100 {
+        background-color: var(--mq-color-grey100);
+    }
+
+    &--grey30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-grey30);
+    }
+
+    &--blue100 {
+        background-color: var(--mq-color-blue100);
+    }
+
+    &--blue30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-blue30);
+    }
+
+    &--gold110 {
+        background-color: var(--mq-color-gold110);
+    }
+
+    &--gold30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-gold30);
+    }
+}

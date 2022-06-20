@@ -1,0 +1,284 @@
+@import './mq-type.mixins.scss';
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: HelveticaNeue-Light, Helvetica, Arial;
+    color: var(--mq-color-grey100);
+
+    &.mq-heading-white {
+        color: var(--mq-color-white);
+    }
+}
+
+h1,
+h2 {
+    margin: 0px 0px 8px 0px;
+}
+
+h3,
+h4 {
+    margin: 8px 0px 8px 0px;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+strong {
+    @extend .mq-body-strong;
+}
+
+em {
+    @extend .mq-body-italic;
+}
+
+small {
+    @extend .mq-body-small;
+}
+
+@media screen and (max-width: 1440px) {
+
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h4 {
+        font-family: HelveticaNeue-Medium, Helvetica, Arial;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.mq-body {
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: var(--mq-color-grey90);
+    font-family: HelveticaNeue, Helvetica, Arial;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    &-strong {
+        @include mq-body-strong;
+    }
+
+    &-italic {
+        @include mq-body-italic;
+    }
+
+    &-grey70 {
+        @include mq-body-grey70;
+    }
+
+    &-grey40 {
+        @include mq-body-grey40;
+    }
+
+    &-red {
+        @include mq-body-red;
+    }
+
+    &-green {
+        @include mq-body-green;
+    }
+
+    &-white {
+        @include mq-body-white;
+    }
+
+    &-small {
+        @include mq-body-small;
+    }
+
+    &-micro {
+        @include mq-body-micro;
+    }
+}
+
+.mq-link {
+    color: var(--mq-styles-link-color100);
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+        cursor: pointer;
+        color: var(--mq-styles-link-hover-color100, var(--mq-styles-link-color100));
+    }
+
+    &--link90 {
+        color: var(--mq-styles-link-color90);
+
+        &:hover {
+            color: var(--mq-styles-link-hover-color90, var(--mq-styles-link-color90));
+        }
+    }
+
+    &--link110 {
+        color: var(--mq-styles-link-color110);
+
+        &:hover {
+            color: var(--mq-styles-link-hover-color110, var(--mq-styles-link-color110));
+        }
+    }
+
+    &--link120 {
+        color: var(--mq-styles-link-color120);
+
+        &:hover {
+            color: var(--mq-styles-link-hover-color120, var(--mq-styles-link-color120));
+        }
+    }
+
+    &--grey110 {
+        color: var(--mq-color-grey110);
+
+        &:hover {
+            color: var(--mq-color-grey110);
+        }
+    }
+
+    &--grey90 {
+        color: var(--mq-color-grey90);
+
+        &:hover {
+            color: var(--mq-color-grey90);
+        }
+    }
+
+    &--grey70 {
+        color: var(--mq-color-grey70);
+
+        &:hover {
+            color: var(--mq-color-grey70);
+        }
+    }
+
+    &--grey40 {
+        color: var(--mq-color-grey40);
+
+        &:hover {
+            color: var(--mq-color-grey40);
+        }
+    }
+
+    &--white {
+        color: var(--mq-color-white);
+
+        &:hover {
+            color: var(--mq-color-white);
+        }
+    }
+}
+
+.mq-label {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--mq-color-grey90);
+
+    &--light {
+        color: var(--mq-color-grey70);
+    }
+
+    &--blue {
+        color: var(--mq-color-blue100);
+    }
+
+    &--orange {
+        color: var(--mq-color-orange100);
+    }
+
+    &--red {
+        color: var(--mq-color-red100);
+    }
+
+    &--green {
+        color: var(--mq-color-green100);
+    }
+}
+
+.mq-number {
+    font-family: HelveticaNeue-Light, Helvetica, Arial;
+    color: var(--mq-color-grey100);
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 32px;
+
+    &--n1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    &--n2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    &--n3 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    &--n4 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    &--white {
+        color: var(--mq-color-white);
+    }
+}
+
+.mq-list-item {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.mq-unordered-list,
+.mq-ordered-list {
+    display: block;
+    margin-block-start: var(--mq-space-small);
+    margin-block-end: var(--mq-space-small);
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: calc(var(--mq-space-base) * 5);
+}
+
+.mq-unordered-list {
+    list-style-type: disc;
+}
+
+.mq-ordered-list {
+    list-style-type: decimal;
+}
+
+.mq-feature-heading {
+    @include mq-feature-heading;
+}

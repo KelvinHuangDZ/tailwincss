@@ -1,0 +1,39 @@
+.mq-link-button {
+    padding: calc(var(--mq-space-base) / 2) var(--mq-space-base);
+    border-radius: calc(var(--mq-space-base) / 2);
+    font-size: 12px;
+    height: 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-color: #bebec0;
+    border: 1px solid transparent;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus,
+    &.focus {
+        color: #33363e;
+        background-color: #f5f5f5;
+        border-color: #bebec0;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &--primary {
+        color: var(--mq-btn-primary-text-color);
+        background-color: var(--mq-btn-primary-background-color);
+        border-color: var(--mq-btn-primary-border-color);
+
+        &:focus,
+        &.focus,
+        &:hover {
+            color: var(--mq-btn-primary-text-color);
+            background-color: var(--mq-btn-primary-hover-background-color);
+            border-color: var(--mq-btn-primary-hover-border-color);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,96 @@
+@mixin mq-font-face($path) {
+    @font-face {
+        font-family: 'HelveticaNeue';
+        font-weight: normal;
+        font-style: normal;
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue/HelveticaNeueLTW01-55Roman.eot');
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue/HelveticaNeueLTW01-55Roman.eot?#iefix')
+                format('embedded-opentype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue/HelveticaNeueLTW01-55Roman.woff') format('woff'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue/HelveticaNeueLTW01-55Roman.ttf') format('truetype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue/HelveticaNeueLTW01-55Roman.svg#5101995a-e73b-4cf9-84e8-f99eb43277b1')
+                format('svg');
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'HelveticaNeue-Light';
+        font-weight: lighter;
+        font-style: lighter;
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue-light/HelveticaNeueLTW01-45Light.eot');
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue-light/HelveticaNeueLTW01-45Light.eot?#iefix')
+                format('embedded-opentype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-light/HelveticaNeueLTW01-45Light.woff') format('woff'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-light/HelveticaNeueLTW01-45Light.ttf') format('truetype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-light/HelveticaNeueLTW01-45Light.svg#82a4e1c2-7ffd-4c58-86fa-4010a6723c8e')
+                format('svg');
+        font-display: fallback;
+    }
+
+    @font-face {
+        font-family: 'HelveticaNeue-Medium';
+        font-weight: bold;
+        font-style: bold;
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue-medium/HelveticaNeueLTW01-65Medium.eot');
+        src: url('#{$path}/assets/mq-styles/fonts/helveticaneue-medium/HelveticaNeueLTW01-65Medium.eot?#iefix')
+                format('embedded-opentype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-medium/HelveticaNeueLTW01-65Medium.woff') format('woff'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-medium/HelveticaNeueLTW01-65Medium.ttf') format('truetype'),
+            url('#{$path}/assets/mq-styles/fonts/helveticaneue-medium/HelveticaNeueLTW01-65Medium.svg#e5567978-93ef-4de1-804d-1f0e3654a014')
+                format('svg');
+        font-display: fallback;
+    }
+
+    /*Including northwell temporarily until southcoast font is available*/
+    @font-face {
+        font-family: 'northwell';
+        src: url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.eot');
+        src: url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.eot?#iefix') format('embedded-opentype'),
+            url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.woff2') format('woff2'),
+            url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.woff') format('woff'),
+            url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.ttf') format('truetype'),
+            url('#{$path}/assets/mq-styles/fonts/northwell/NorthwellAlt.svg#NorthwellAlt') format('svg');
+        font-display: fallback;
+    }
+}
+
+@mixin mq-body-strong() {
+    font-family: HelveticaNeue-Medium, Helvetica, Arial;
+}
+
+@mixin mq-body-italic() {
+    font-style: italic;
+}
+
+@mixin mq-body-grey70() {
+    color: var(--mq-color-grey70);
+}
+
+@mixin mq-body-grey40() {
+    color: var(--mq-color-grey40);
+}
+
+@mixin mq-body-red() {
+    color: var(--mq-color-red100);
+}
+
+@mixin mq-body-green() {
+    color: var(--mq-color-green100);
+}
+
+@mixin mq-body-white() {
+    color: var(--mq-color-white);
+}
+@mixin mq-body-small() {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@mixin mq-body-micro() {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+@mixin mq-feature-heading() {
+    font-family: northwell;
+}

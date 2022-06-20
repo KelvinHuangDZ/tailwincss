@@ -1,0 +1,39 @@
+:root {
+    /* These are box shadow properties. naming is coming from design. */
+
+    /** Level 1*/
+    --mq-boxshadow-l1-down: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 6px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-right: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-up: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px -6px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-left: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), -6px 0px 4px -4px rgba(0, 0, 0, 0.08);
+
+    /** Level 2 */
+    --mq-boxshadow-l2-down: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-right: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 8px 0px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-up: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 0px -8px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-left: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), -8px 0px 8px -4px rgba(0, 0, 0, 0.1);
+
+    /** Level 3 */
+    --mq-boxshadow-l3-down: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 0px 10px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-right: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 10px 0px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-up: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 0px -10px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-left: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), -10px 0px 16px -4px rgba(0, 0, 0, 0.1);
+
+    /** Level 4 */
+    --mq-boxshadow-l4-down: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 0px 12px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-right: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 12px 0px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-up: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 0px -12px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-left: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), -12px 0px 20px -4px rgba(0, 0, 0, 0.1);
+}
