@@ -1,9 +1,9 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
+    'postcss-sassy-mixins': {},
     'tailwindcss/nesting': {},
     'postcss-simple-vars': {},
-    'postcss-sassy-mixins': {},
     tailwindcss: {},
     autoprefixer: {}
   }
