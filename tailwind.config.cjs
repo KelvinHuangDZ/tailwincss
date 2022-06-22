@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  corePlugins: {
-    preflight: false,
-  },
+  content: ['./src/modules/**/*.{html,js}',],
   theme: {
     screens: {
       sm: '480px',
@@ -85,10 +82,5 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    require( 'tailwindcss' ),
-		require( 'precss' ),
-    require('tailwindcss/nesting'),
-		require( 'autoprefixer' )
-  ],
+  plugins: []
 }
