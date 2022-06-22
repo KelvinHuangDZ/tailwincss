@@ -1,12 +1,3 @@
-:root {
-    --mq-space-narrow: 4px;
-    --mq-space-base: 8px;
-    --mq-space-xsmall: 12px;
-    --mq-space-small: 16px;
-    --mq-space-medium: 24px;
-    --mq-space-large: 32px;
-}
-
 .mq-padding-narrow {
     padding: var(--mq-space-narrow);
 }

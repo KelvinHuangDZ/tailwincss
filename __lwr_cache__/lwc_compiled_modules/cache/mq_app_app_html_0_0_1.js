@@ -8,9 +8,6 @@ function tmpl($api, $cmp, $slotset, $ctx) {
   return [api_element("main", {
     key: 0
   }, [api_element("h1", {
-    classMap: {
-      "text-3xl": true
-    },
     key: 1
   }, [api_text("Test")])])];
 }

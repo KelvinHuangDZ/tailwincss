@@ -1,0 +1,2129 @@
+/*
+! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::before, ::after{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+}
+
+::backdrop{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+}
+:host {
+    --mq-space-narrow: 4px;
+    --mq-space-base: 8px;
+    --mq-space-xsmall: 12px;
+    --mq-space-small: 16px;
+    --mq-space-medium: 24px;
+    --mq-space-large: 32px;
+
+    /* White color */
+    --mq-color-white: #ffffff;
+
+    /* Grey color variations */
+    --mq-color-grey110: #000000;
+    --mq-color-grey100: #15171c;
+    --mq-color-grey90: #33363e;
+    --mq-color-grey80: #4f5156;
+    --mq-color-grey70: #666870;
+    --mq-color-grey60: #85868c;
+    --mq-color-grey50: #a1a2a6;
+    --mq-color-grey40: #bebec0;
+    --mq-color-grey30: #d0d1d2;
+    --mq-color-grey20: #e5e5e5;
+    --mq-color-grey10: #f5f5f5;
+
+    /* Red color variations */
+    --mq-color-red10: #ffe8e5;
+    --mq-color-red30: #ffd0cc;
+    --mq-color-red50: #ff9b94;
+    --mq-color-red70: #f7615c;
+    --mq-color-red100: #dc3832;
+    --mq-color-red110: #c02621;
+
+    /* Green color variations */
+    --mq-color-green10: #e6faeb;
+    --mq-color-green30: #bdf0cd;
+    --mq-color-green50: #8bd9a1;
+    --mq-color-green70: #68c487;
+    --mq-color-green100: #3aa65e;
+    --mq-color-green110: #287140;
+
+    /* Orange color variations */
+    --mq-color-orange10: #fff0e0;
+    --mq-color-orange30: #ffdfc2;
+    --mq-color-orange50: #ffc58a;
+    --mq-color-orange70: #ffb066;
+    --mq-color-orange100: #f99b42;
+    --mq-color-orange110: #f4813d;
+
+    /* Blue color variations */
+    --mq-color-blue10: #e6f3ff;
+    --mq-color-blue30: #cce4fc;
+    --mq-color-blue50: #9dccfa;
+    --mq-color-blue70: #68abf2;
+    --mq-color-blue100: #0f76de;
+    --mq-color-blue110: #0d65bf;
+
+    /* Gold color variations */
+    --mq-color-gold10: #f8f4e7;
+    --mq-color-gold30: #f0e8cf;
+    --mq-color-gold50: #e7d9af;
+    --mq-color-gold70: #ddc98f;
+    --mq-color-gold100: #cfb35f;
+    --mq-color-gold110: #b59841;
+
+    --mq-checkbox-container-width-height: 40px;
+
+
+    /* These are box shadow properties. naming is coming from design. */
+
+    /** Level 1*/
+    --mq-boxshadow-l1-down: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 6px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-right: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-up: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px -6px 4px -4px rgba(0, 0, 0, 0.08);
+
+    --mq-boxshadow-l1-left: 0px 0px 4px 0px rgba(0, 0, 0, 0.08), -6px 0px 4px -4px rgba(0, 0, 0, 0.08);
+
+    /** Level 2 */
+    --mq-boxshadow-l2-down: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-right: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 8px 0px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-up: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), 0px -8px 8px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l2-left: 0px 0px 6px 0px rgba(0, 0, 0, 0.08), -8px 0px 8px -4px rgba(0, 0, 0, 0.1);
+
+    /** Level 3 */
+    --mq-boxshadow-l3-down: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 0px 10px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-right: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 10px 0px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-up: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), 0px -10px 16px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l3-left: 0px 0px 8px 0px rgba(0, 0, 0, 0.08), -10px 0px 16px -4px rgba(0, 0, 0, 0.1);
+
+    /** Level 4 */
+    --mq-boxshadow-l4-down: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 0px 12px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-right: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 12px 0px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-up: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), 0px -12px 20px -4px rgba(0, 0, 0, 0.1);
+
+    --mq-boxshadow-l4-left: 0px 0px 10px 0px rgba(0, 0, 0, 0.08), -12px 0px 20px -4px rgba(0, 0, 0, 0.1);
+}
+/* @import "tailwindcss/components"; */
+/* @import "./custom-components.css"; */
+/* @import "tailwindcss/utilities"; */
+/* @import "./custom-utilities.css"; */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* https://html.spec.whatwg.org/multipage/rendering.html#tables-2 */
+thead,
+tbody,
+tfoot {
+    vertical-align: middle;
+}
+td,
+th,
+tr {
+    vertical-align: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.mq-padding-narrow {
+    padding: var(--mq-space-narrow);
+}
+.mq-padding-narrow-top {
+    padding-top: var(--mq-space-narrow);
+}
+.mq-padding-narrow-right {
+    padding-right: var(--mq-space-narrow);
+}
+.mq-padding-narrow-bottom {
+    padding-bottom: var(--mq-space-narrow);
+}
+.mq-padding-narrow-left {
+    padding-left: var(--mq-space-narrow);
+}
+.mq-padding-narrow-vertical {
+    padding-top: var(--mq-space-narrow);
+    padding-bottom: var(--mq-space-narrow);
+}
+.mq-padding-narrow-horizontal {
+    padding-left: var(--mq-space-narrow);
+    padding-right: var(--mq-space-narrow);
+}
+.mq-padding-base {
+    padding: var(--mq-space-base);
+}
+.mq-padding-base-top {
+    padding-top: var(--mq-space-base);
+}
+.mq-padding-base-right {
+    padding-right: var(--mq-space-base);
+}
+.mq-padding-base-bottom {
+    padding-bottom: var(--mq-space-base);
+}
+.mq-padding-base-left {
+    padding-left: var(--mq-space-base);
+}
+.mq-padding-base-vertical {
+    padding-top: var(--mq-space-base);
+    padding-bottom: var(--mq-space-base);
+}
+.mq-padding-base-horizontal {
+    padding-left: var(--mq-space-base);
+    padding-right: var(--mq-space-base);
+}
+.mq-padding-xsmall {
+    padding: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-top {
+    padding-top: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-right {
+    padding-right: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-bottom {
+    padding-bottom: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-left {
+    padding-left: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-vertical {
+    padding-top: var(--mq-space-xsmall);
+    padding-bottom: var(--mq-space-xsmall);
+}
+.mq-padding-xsmall-horizontal {
+    padding-left: var(--mq-space-xsmall);
+    padding-right: var(--mq-space-xsmall);
+}
+.mq-padding-small {
+    padding: var(--mq-space-small);
+}
+.mq-padding-small-top {
+    padding-top: var(--mq-space-small);
+}
+.mq-padding-small-right {
+    padding-right: var(--mq-space-small);
+}
+.mq-padding-small-bottom {
+    padding-bottom: var(--mq-space-small);
+}
+.mq-padding-small-left {
+    padding-left: var(--mq-space-small);
+}
+.mq-padding-small-vertical {
+    padding-top: var(--mq-space-small);
+    padding-bottom: var(--mq-space-small);
+}
+.mq-padding-small-horizontal {
+    padding-left: var(--mq-space-small);
+    padding-right: var(--mq-space-small);
+}
+.mq-padding-medium {
+    padding: var(--mq-space-medium);
+}
+.mq-padding-medium-top {
+    padding-top: var(--mq-space-medium);
+}
+.mq-padding-medium-right {
+    padding-right: var(--mq-space-medium);
+}
+.mq-padding-medium-bottom {
+    padding-bottom: var(--mq-space-medium);
+}
+.mq-padding-medium-left {
+    padding-left: var(--mq-space-medium);
+}
+.mq-padding-medium-vertical {
+    padding-top: var(--mq-space-medium);
+    padding-bottom: var(--mq-space-medium);
+}
+.mq-padding-medium-horizontal {
+    padding-left: var(--mq-space-medium);
+    padding-right: var(--mq-space-medium);
+}
+.mq-padding-large {
+    padding: var(--mq-space-large);
+}
+.mq-padding-large-top {
+    padding-top: var(--mq-space-large);
+}
+.mq-padding-large-right {
+    padding-right: var(--mq-space-large);
+}
+.mq-padding-large-bottom {
+    padding-bottom: var(--mq-space-large);
+}
+.mq-padding-large-left {
+    padding-left: var(--mq-space-large);
+}
+.mq-padding-large-vertical {
+    padding-top: var(--mq-space-large);
+    padding-bottom: var(--mq-space-large);
+}
+.mq-padding-large-horizontal {
+    padding-left: var(--mq-space-large);
+    padding-right: var(--mq-space-large);
+}
+.mq-margin-narrow {
+    margin: var(--mq-space-narrow);
+}
+.mq-margin-narrow-top {
+    margin-top: var(--mq-space-narrow);
+}
+.mq-margin-narrow-right {
+    margin-right: var(--mq-space-narrow);
+}
+.mq-margin-narrow-bottom {
+    margin-bottom: var(--mq-space-narrow);
+}
+.mq-margin-narrow-left {
+    margin-left: var(--mq-space-narrow);
+}
+.mq-margin-narrow-vertical {
+    margin-top: var(--mq-space-narrow);
+    margin-bottom: var(--mq-space-narrow);
+}
+.mq-margin-narrow-horizontal {
+    margin-left: var(--mq-space-narrow);
+    margin-right: var(--mq-space-narrow);
+}
+.mq-margin-base {
+    margin: var(--mq-space-base);
+}
+.mq-margin-base-top {
+    margin-top: var(--mq-space-base);
+}
+.mq-margin-base-right {
+    margin-right: var(--mq-space-base);
+}
+.mq-margin-base-bottom {
+    margin-bottom: var(--mq-space-base);
+}
+.mq-margin-base-left {
+    margin-left: var(--mq-space-base);
+}
+.mq-margin-base-vertical {
+    margin-top: var(--mq-space-base);
+    margin-bottom: var(--mq-space-base);
+}
+.mq-margin-base-horizontal {
+    margin-left: var(--mq-space-base);
+    margin-right: var(--mq-space-base);
+}
+.mq-margin-xsmall {
+    margin: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-top {
+    margin-top: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-right {
+    margin-right: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-bottom {
+    margin-bottom: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-left {
+    margin-left: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-vertical {
+    margin-top: var(--mq-space-xsmall);
+    margin-bottom: var(--mq-space-xsmall);
+}
+.mq-margin-xsmall-horizontal {
+    margin-left: var(--mq-space-xsmall);
+    margin-right: var(--mq-space-xsmall);
+}
+.mq-margin-small {
+    margin: var(--mq-space-small);
+}
+.mq-margin-small-top {
+    margin-top: var(--mq-space-small);
+}
+.mq-margin-small-right {
+    margin-right: var(--mq-space-small);
+}
+.mq-margin-small-bottom {
+    margin-bottom: var(--mq-space-small);
+}
+.mq-margin-small-left {
+    margin-left: var(--mq-space-small);
+}
+.mq-margin-small-vertical {
+    margin-top: var(--mq-space-small);
+    margin-bottom: var(--mq-space-small);
+}
+.mq-margin-small-horizontal {
+    margin-left: var(--mq-space-small);
+    margin-right: var(--mq-space-small);
+}
+.mq-margin-medium {
+    margin: var(--mq-space-medium);
+}
+.mq-margin-medium-top {
+    margin-top: var(--mq-space-medium);
+}
+.mq-margin-medium-right {
+    margin-right: var(--mq-space-medium);
+}
+.mq-margin-medium-bottom {
+    margin-bottom: var(--mq-space-medium);
+}
+.mq-margin-medium-left {
+    margin-left: var(--mq-space-medium);
+}
+.mq-margin-medium-vertical {
+    margin-top: var(--mq-space-medium);
+    margin-bottom: var(--mq-space-medium);
+}
+.mq-margin-medium-horizontal {
+    margin-left: var(--mq-space-medium);
+    margin-right: var(--mq-space-medium);
+}
+.mq-margin-large {
+    margin: var(--mq-space-large);
+}
+.mq-margin-large-top {
+    margin-top: var(--mq-space-large);
+}
+.mq-margin-large-right {
+    margin-right: var(--mq-space-large);
+}
+.mq-margin-large-bottom {
+    margin-bottom: var(--mq-space-large);
+}
+.mq-margin-large-left {
+    margin-left: var(--mq-space-large);
+}
+.mq-margin-large-vertical {
+    margin-top: var(--mq-space-large);
+    margin-bottom: var(--mq-space-large);
+}
+.mq-margin-large-horizontal {
+    margin-left: var(--mq-space-large);
+    margin-right: var(--mq-space-large);
+}
+.mq-clearfix:before,
+.mq-clearfix:after {
+    content: ' ';
+    display: table;
+}
+.mq-clearfix:after {
+    clear: both;
+}
+.mq-center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mq-pull-right {
+    float: right !important;
+}
+.mq-pull-left {
+    float: left !important;
+}
+.mq-hide {
+    display: none !important;
+}
+.mq-show {
+    display: block !important;
+}
+.mq-invisible {
+    visibility: hidden;
+}
+.mq-text-left {
+    text-align: left;
+}
+.mq-text-right {
+    text-align: right;
+}
+.mq-text-center {
+    text-align: center;
+}
+.mq-text-justify {
+    text-align: justify;
+}
+.mq-text-nowrap {
+    white-space: nowrap;
+}
+.mq-text-lowercase {
+    text-transform: lowercase;
+}
+.mq-text-uppercase {
+    text-transform: uppercase;
+}
+.mq-text-capitalize {
+    text-transform: capitalize;
+}
+/*
+    Ref: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
+*/
+.mq-sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+.mq-sr-only--focusable:focus,
+    .mq-sr-only--focusable:active {
+        clip: auto !important;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+        height: auto !important;
+        margin: auto !important;
+        overflow: visible !important;
+        width: auto !important;
+        white-space: normal !important;
+    }
+h1,
+h2,
+h3,
+h4 {
+    font-family: HelveticaNeue-Light, Helvetica, Arial;
+    color: var(--mq-color-grey100);
+}
+h1.mq-heading-white, h2.mq-heading-white, h3.mq-heading-white, h4.mq-heading-white {
+        color: var(--mq-color-white);
+    }
+h1,
+h2 {
+    margin: 0px 0px 8px 0px;
+}
+h3,
+h4 {
+    margin: 8px 0px 8px 0px;
+}
+h1 {
+    font-size: 28px;
+    line-height: 36px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+}
+strong {
+    @extend .mq-body-strong;
+}
+em {
+    @extend .mq-body-italic;
+}
+small {
+    @extend .mq-body-small;
+}
+@media screen and (max-width: 1440px) {
+
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h4 {
+        font-family: HelveticaNeue-Medium, Helvetica, Arial;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+.mq-body {
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: var(--mq-color-grey90);
+    font-family: HelveticaNeue, Helvetica, Arial;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.mq-body-strong {
+    font-family: HelveticaNeue-Medium, Helvetica, Arial;
+    }
+.mq-body-italic {
+    font-style: italic;
+    }
+.mq-body-grey70 {
+    color: var(--mq-color-grey70);
+    }
+.mq-body-grey40 {
+    color: var(--mq-color-grey40);
+    }
+.mq-body-red {
+    color: var(--mq-color-red100);
+    }
+.mq-body-green {
+    color: var(--mq-color-green100);
+    }
+.mq-body-white {
+    color: var(--mq-color-white);
+    }
+.mq-body-small {
+    font-size: 12px;
+    line-height: 16px;
+    }
+.mq-body-micro {
+    font-size: 10px;
+    line-height: 14px;
+    }
+.mq-link {
+    color: var(--mq-styles-link-color100);
+}
+.mq-link:hover {
+        outline: 0;
+        text-decoration: underline;
+        cursor: pointer;
+        color: var(--mq-styles-link-hover-color100, var(--mq-styles-link-color100));
+    }
+.mq-link--link90 {
+        color: var(--mq-styles-link-color90);
+    }
+.mq-link--link90:hover {
+            color: var(--mq-styles-link-hover-color90, var(--mq-styles-link-color90));
+        }
+.mq-link--link110 {
+        color: var(--mq-styles-link-color110);
+    }
+.mq-link--link110:hover {
+            color: var(--mq-styles-link-hover-color110, var(--mq-styles-link-color110));
+        }
+.mq-link--link120 {
+        color: var(--mq-styles-link-color120);
+    }
+.mq-link--link120:hover {
+            color: var(--mq-styles-link-hover-color120, var(--mq-styles-link-color120));
+        }
+.mq-link--grey110 {
+        color: var(--mq-color-grey110);
+    }
+.mq-link--grey110:hover {
+            color: var(--mq-color-grey110);
+        }
+.mq-link--grey90 {
+        color: var(--mq-color-grey90);
+    }
+.mq-link--grey90:hover {
+            color: var(--mq-color-grey90);
+        }
+.mq-link--grey70 {
+        color: var(--mq-color-grey70);
+    }
+.mq-link--grey70:hover {
+            color: var(--mq-color-grey70);
+        }
+.mq-link--grey40 {
+        color: var(--mq-color-grey40);
+    }
+.mq-link--grey40:hover {
+            color: var(--mq-color-grey40);
+        }
+.mq-link--white {
+        color: var(--mq-color-white);
+    }
+.mq-link--white:hover {
+            color: var(--mq-color-white);
+        }
+.mq-label {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--mq-color-grey90);
+}
+.mq-label--light {
+        color: var(--mq-color-grey70);
+    }
+.mq-label--blue {
+        color: var(--mq-color-blue100);
+    }
+.mq-label--orange {
+        color: var(--mq-color-orange100);
+    }
+.mq-label--red {
+        color: var(--mq-color-red100);
+    }
+.mq-label--green {
+        color: var(--mq-color-green100);
+    }
+.mq-number {
+    font-family: HelveticaNeue-Light, Helvetica, Arial;
+    color: var(--mq-color-grey100);
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 32px;
+}
+.mq-number--n1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+.mq-number--n2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+.mq-number--n3 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+.mq-number--n4 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+.mq-number--white {
+        color: var(--mq-color-white);
+    }
+.mq-list-item {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.mq-unordered-list,
+.mq-ordered-list {
+    display: block;
+    -webkit-margin-before: var(--mq-space-small);
+            margin-block-start: var(--mq-space-small);
+    -webkit-margin-after: var(--mq-space-small);
+            margin-block-end: var(--mq-space-small);
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+    -webkit-padding-start: calc(var(--mq-space-base) * 5);
+            padding-inline-start: calc(var(--mq-space-base) * 5);
+}
+.mq-unordered-list {
+    list-style-type: disc;
+}
+.mq-ordered-list {
+    list-style-type: decimal;
+}
+.mq-feature-heading {
+    font-family: northwell;
+}
+.mq-checkbox__container {
+        display: inline-block;
+        height: var(--mq-checkbox-container-width-height);
+        width: var(--mq-checkbox-container-width-height);
+        line-height: 0;
+        margin: auto;
+        order: 0;
+        vertical-align: middle;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
+.mq-checkbox__outline {
+        position: relative;
+        top: calc(var(--mq-checkbox-width-height) * -1);
+        height: var(--mq-checkbox-container-width-height);
+        width: var(--mq-checkbox-container-width-height);
+        border-radius: 50%;
+    }
+.mq-checkbox__input {
+        position: relative;
+        top: 13px;
+        left: 11px;
+        width: var(--mq-checkbox-width-height);
+        height: var(--mq-checkbox-width-height);
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+             appearance: none;
+        cursor: pointer;
+    }
+.mq-checkbox__input:focus:after {
+            border-color: var(--mq-color-blue100);
+        }
+.mq-checkbox__input::after {
+            content: '';
+            display: block;
+            width: var(--mq-checkbox-width-height);
+            height: var(--mq-checkbox-width-height);
+            margin-top: -2px;
+            margin-right: 5px;
+            border: 1px solid var(--mq-color-grey30);
+            background-color: var(--mq-color-white);
+            border-radius: 2px;
+            transition: 240ms;
+        }
+.mq-checkbox__input:hover::after {
+            border-color: var(--mq-color-blue100);
+        }
+.mq-checkbox__input:checked::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5px;
+            display: table;
+            width: 6px;
+            height: 10px;
+            border: 2px solid var(--mq-color-white);
+            border-top-width: 0;
+            border-left-width: 0;
+            transform: rotate(45deg);
+        }
+.mq-checkbox__input:checked::after {
+            border-color: var(--mq-color-blue100);
+            background-color: var(--mq-color-blue100);
+        }
+.mq-checkbox__input:hover + div {
+        background-color: var(--mq-checkbox-hover-background-color);
+        cursor: pointer;
+    }
+.mq-link-button {
+    padding: calc(var(--mq-space-base) / 2) var(--mq-space-base);
+    border-radius: calc(var(--mq-space-base) / 2);
+    font-size: 12px;
+    height: 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-color: #bebec0;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+.mq-link-button:hover,
+    .mq-link-button:focus,
+    .mq-link-button.focus {
+        color: #33363e;
+        background-color: #f5f5f5;
+        border-color: #bebec0;
+        text-decoration: none;
+        outline: 0;
+    }
+.mq-link-button--primary {
+        color: var(--mq-btn-primary-text-color);
+        background-color: var(--mq-btn-primary-background-color);
+        border-color: var(--mq-btn-primary-border-color);
+    }
+.mq-link-button--primary:focus,
+        .mq-link-button--primary.focus,
+        .mq-link-button--primary:hover {
+            color: var(--mq-btn-primary-text-color);
+            background-color: var(--mq-btn-primary-hover-background-color);
+            border-color: var(--mq-btn-primary-hover-border-color);
+        }
+.mq-link-button:hover {
+        cursor: pointer;
+    }
+.mq-divider {
+    border-bottom: 1px solid var(--mq-color-grey90);
+}
+.mq-divider--grey10 {
+        border-bottom-color: var(--mq-color-grey10);
+    }
+.mq-divider--grey20 {
+        border-bottom-color: var(--mq-color-grey20);
+    }
+.mq-divider--grey50 {
+        border-bottom-color: var(--mq-color-grey50);
+    }
+.mq-divider--grey70 {
+        border-bottom-color: var(--mq-color-grey70);
+    }
+.mq-divider--space-base-top {
+        margin-top: var(--mq-space-base);
+    }
+.mq-divider--space-base-bottom {
+        margin-bottom: var(--mq-space-base);
+    }
+.mq-divider--space-base-vertical {
+        margin-top: var(--mq-space-base);
+        margin-bottom: var(--mq-space-base);
+    }
+.mq-divider--space-small-top {
+        margin-top: var(--mq-space-small);
+    }
+.mq-divider--space-small-bottom {
+        margin-bottom: var(--mq-space-small);
+    }
+.mq-divider--space-small-vertical {
+        margin-top: var(--mq-space-small);
+        margin-bottom: var(--mq-space-small);
+    }
+.mq-divider--space-medium-top {
+        margin-top: var(--mq-space-medium);
+    }
+.mq-divider--space-medium-bottom {
+        margin-bottom: var(--mq-space-medium);
+    }
+.mq-divider--space-medium-vertical {
+        margin-top: var(--mq-space-medium);
+        margin-bottom: var(--mq-space-medium);
+    }
+.mq-divider--space-large-top {
+        margin-top: var(--mq-space-large);
+    }
+.mq-divider--space-large-bottom {
+        margin-bottom: var(--mq-space-large);
+    }
+.mq-divider--space-large-vertical {
+        margin-top: var(--mq-space-large);
+        margin-bottom: var(--mq-space-large);
+    }
+.mq-badge {
+    background-color: var(--mq-color-grey100);
+    border-radius: calc(var(--mq-space-base) * 0.5);
+    color: var(--mq-color-white);
+    padding: 0px var(--mq-space-base);
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.mq-badge--grey100 {
+        background-color: var(--mq-color-grey100);
+    }
+.mq-badge--grey30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-grey30);
+    }
+.mq-badge--blue100 {
+        background-color: var(--mq-color-blue100);
+    }
+.mq-badge--blue30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-blue30);
+    }
+.mq-badge--gold110 {
+        background-color: var(--mq-color-gold110);
+    }
+.mq-badge--gold30 {
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-gold30);
+    }
+.mq-pill {
+    display: inline-block;
+    height: var(--mq-space-small);
+    padding-right: var(--mq-space-base);
+    padding-left: var(--mq-space-base);
+    background-color: var(--mq-color-grey70);
+    border-radius: var(--mq-space-base);
+    text-align: center;
+    color: var(--mq-color-white);
+    font-family: HelveticaNeue, Helvetica, Arial;
+    font-size: 10px;
+    line-height: calc(var(--mq-space-small) - 1px);
+    max-width: var(--mq-pill-maxwidth, 216px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mq-pill--default {
+        height: var(--mq-space-small);
+        line-height: calc(var(--mq-space-small) - 1px);
+        font-size: 10px;
+    }
+.mq-pill--large {
+        height: 20px;
+        line-height: 19px;
+        font-size: 12px;
+        border-radius: var(--mq-space-xsmall);
+    }
+.mq-pill--info {
+        background-color: var(--mq-color-blue100);
+    }
+.mq-pill--success {
+        background-color: var(--mq-color-green100);
+    }
+.mq-pill--error {
+        background-color: var(--mq-color-red100);
+    }
+.mq-pill--warning {
+        background-color: var(--mq-color-orange100);
+    }
+.mq-pill--disabled {
+        background-color: var(--mq-color-grey70);
+    }
+.mq-pill-light {
+        @extend .mq-pill;
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-color-grey10);
+    }
+.mq-pill-light--info {
+            background-color: var(--mq-color-blue10);
+        }
+.mq-pill-light--success {
+            background-color: var(--mq-color-green10);
+        }
+.mq-pill-light--error {
+            background-color: var(--mq-color-red10);
+        }
+.mq-pill-light--warning {
+            background-color: var(--mq-color-orange10);
+        }
+.mq-pill-light--disabled {
+            background-color: var(--mq-color-grey10);
+        }
+/**
+ DO NOT USE THESE
+*/
+/******************************************
+
+    WARNING - DO NOT USE THESE
+
+*******************************************/
+/* Dropdown arrow/caret */
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9; /* IE8 */
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+/* The dropdown wrapper (div) */
+.dropup,
+.dropdown {
+    position: relative;
+}
+/* Prevent the focus on the dropdown toggle when closing dropdowns */
+.dropdown-toggle:focus {
+    outline: 0;
+}
+/* The dropdown menu (ul) */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none; /* none by default, but block on "open" of the menu */
+    float: left;
+    min-width: calc(var(--mq-space-base) * 20);
+    list-style: none;
+    text-align: left; /* Ensures proper alignment if parent has it changed (e.g., modal footer) */
+    border-radius: 4px;
+    box-shadow: var(--mq-boxshadow-l2-down);
+    background-color: var(--mq-color-white);
+    background-clip: padding-box;
+
+    /* Aligns the dropdown menu to right */
+    /* */
+}
+/* Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]` */
+.dropdown-menu.pull-right,
+    .dropdown-menu.mq-pull-right {
+        right: 0;
+        left: auto;
+    }
+/* Dividers (basically an hr) within the dropdown */
+.dropdown-menu .divider {
+        height: 1px;
+        overflow: hidden;
+        background-color: var(--mq-color-grey20);
+        padding: 0px;
+    }
+/* Links within the dropdown menu */
+.dropdown-menu > li {
+        display: block;
+        clear: both;
+        font-weight: normal;
+        white-space: nowrap; /* prevent links from randomly breaking onto new lines */
+        height: calc(var(--mq-space-base) * 5);
+        line-height: calc(var(--mq-space-base) * 5);
+        font-size: 14px;
+    }
+.dropdown-menu > li:not(:last-child) {
+            border-bottom: 1px solid var(--mq-color-grey10);
+        }
+.dropdown-menu > li > a {
+            font-size: 14px;
+            padding-left: calc(var(--mq-space-small) + 2px); /*plus 2 for border on hover and selected state */
+            padding-right: var(--mq-space-small);
+            width: 100%;
+            display: block;
+            color: var(--mq-color-grey70);
+        }
+/* Hover/Focus state */
+.dropdown-menu > li:hover:not(.disabled),
+    .dropdown-menu > li:focus:not(.disabled) {
+        cursor: pointer;
+        color: var(--mq-color-grey90);
+        background-color: var(--mq-dropdown-option-hover-bg-color);
+    }
+.dropdown-menu > li:hover:not(.disabled) > a, .dropdown-menu > li:focus:not(.disabled) > a {
+            padding-left: var(--mq-space-small);
+            border-left: 2px solid var(--mq-color-grey100);
+        }
+/* Active state */
+.dropdown-menu > .active > a,
+    .dropdown-menu > .active > a:hover,
+    .dropdown-menu > .active > a:focus,
+    .dropdown-menu > [selected] > a,
+    .dropdown-menu > [selected] > a:hover,
+    .dropdown-menu > [selected] > a:focus {
+        padding-left: var(--mq-space-small);
+        border-left: 2px solid var(--mq-color-blue100);
+        color: var(--mq-color-grey90);
+        text-decoration: none;
+        outline: 0;
+    }
+/* Disabled state */
+/* */
+/* Gray out text and ensure the hover/focus state remains gray */
+.dropdown-menu > .disabled,
+    .dropdown-menu > .disabled:hover,
+    .dropdown-menu > .disabled:focus,
+    .dropdown-menu > .disabled > a,
+    .dropdown-menu > .disabled > a:hover,
+    .dropdown-menu > .disabled > a:focus {
+        color: var(--mq-color-grey40);
+    }
+/* Nuke hover/focus effects */
+.dropdown-menu > .disabled:hover,
+    .dropdown-menu > .disabled:focus,
+    .dropdown-menu > .disabled > a:hover,
+    .dropdown-menu > .disabled > a:focus {
+        text-decoration: none;
+        background-color: transparent;
+        background-image: none; /* Remove CSS gradient */
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+        cursor: not-allowed;
+    }
+/* Open state for the dropdown */
+/* Show the menu */
+.open > .dropdown-menu {
+        display: block;
+    }
+/* Remove the outline when :focus is triggered */
+.open > a {
+        outline: 0;
+    }
+/* Menu positioning */
+/* */
+/* Add extra class to `.dropdown-menu` to flip the alignment of the dropdown */
+/* menu with the parent. */
+.dropdown-menu-right {
+    left: auto; /* Reset the default from `.dropdown-menu` */
+    right: 0;
+}
+/* With v3, we enabled auto-flipping if you have a dropdown within a right */
+/* aligned nav component. To enable the undoing of that, we provide an override */
+/* to restore the default dropdown menu alignment. */
+/* */
+/* This is only for left-aligning a dropdown menu within a `.navbar-right` or */
+/* `.pull-right` nav component. */
+.dropdown-menu-left {
+    left: 0;
+    right: auto;
+}
+/* Dropdown section headers */
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 14px;
+    color: var(--mq-color-grey70);
+}
+.dropdown-header:hover {
+        cursor: default;
+    }
+/* Backdrop to catch body clicks on mobile, etc. */
+.dropdown-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 990;
+}
+/* Right aligned dropdowns */
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+/* Allow for dropdowns to go bottom up (aka, dropup-menu) */
+/* */
+/* Just add .dropup after the standard .dropdown class and you're set, bro. */
+/* TODO: abstract this so that the navbar fixed styles are not placed here? */
+/* Reverse the caret */
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+        border-top: 0;
+        border-bottom: 4px dashed;
+        border-bottom: 4px solid \9; /* IE8 */
+        content: '';
+    }
+/* Different positioning for bottom up menu */
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
+        top: auto;
+        bottom: 100%;
+        margin-bottom: 2px;
+    }
+/* Component alignment */
+/* */
+/* Reiterate per navbar.less and the modified component alignment there. */
+@media (min-width: 1024) {
+
+    .navbar-right {
+        /* Necessary for overrides of the default right aligned menu. */
+    }
+
+        .navbar-right .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+        /* Will remove come v4 in all likelihood. */
+
+        .navbar-right .dropdown-menu-left {
+            left: 0;
+            right: auto;
+        }
+}
+.dropup .dropdown-toggle, .dropdown .dropdown-toggle {
+        cursor: pointer;
+    }
+.dropup .dropdown-toggle[disabled], .dropdown .dropdown-toggle[disabled] {
+        cursor: not-allowed;
+    }
+.dropup .dropdown-menu, .dropdown .dropdown-menu {
+        min-width: 100%;
+    }
+.dropup .dropdown-menu li:not(:last-child).dropdown-header, .dropdown .dropdown-menu li:not(:last-child).dropdown-header {
+                padding: calc(var(--mq-space-small) + 2px);
+            }
+.dropup .dropdown-menu li:not(:last-child).dropdown-header.dropdown-header--label, .dropdown .dropdown-menu li:not(:last-child).dropdown-header.dropdown-header--label {
+                    color: var(--mq-color-grey40);
+                }
+.dropup .dropdown-menu li:not(:last-child).dropdown-link-item, .dropdown .dropdown-menu li:not(:last-child).dropdown-link-item {
+                padding: var(--mq-space-small);
+                font-weight: normal;
+                cursor: pointer;
+                white-space: nowrap;
+                color: var(--mq-color-grey70);
+            }
+.dropup .dropdown-menu li:not(:last-child).dropdown-link-item:hover, .dropdown .dropdown-menu li:not(:last-child).dropdown-link-item:hover {
+                    color: var(--mq-color-grey90);
+                    border-left: 2px solid var(--mq-color-grey100);
+                    background-color: var(--mq-dropdown-option-hover-bg-color);
+                }
+.dropup .dropdown-menu li:not(:last-child) > label, .dropdown .dropdown-menu li:not(:last-child) > label {
+                margin-bottom: 0;
+            }
+.dropup .dropdown-menu li:not(:last-child).disabled, .dropdown .dropdown-menu li:not(:last-child).disabled {
+                color: var(--mq-color-grey40);
+            }
+.dropup .dropdown-menu li:not(:last-child).active > a,
+                .dropup .dropdown-menu li:not(:last-child).active > a:hover,
+                .dropdown .dropdown-menu li:not(:last-child).active > a,
+                .dropdown .dropdown-menu li:not(:last-child).active > a:hover {
+                    padding-left: var(--mq-space-small);
+                    border-left: 2px solid var(--mq-color-blue100);
+                    color: var(--mq-color-grey90);
+                }
+.dropup .dropdown-menu li:not(:last-child), .dropdown .dropdown-menu li:not(:last-child){
+            border-bottom: 1px solid var(--mq-color-grey10);
+}
+.dropup i.icon-triangledown, .dropdown i.icon-triangledown {
+        font-size: 10px;
+        vertical-align: middle;
+        line-height: 20px;
+    }
+/* helper mixins for buttons */
+/* */
+/* Button groups */
+/* -------------------------------------------------- */
+/* Make the div behave like a button */
+.btn-group,
+.btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* match .btn alignment given font-size hack above */
+.btn-group > .btn, .btn-group-vertical > .btn {
+        position: relative;
+        float: left;
+    }
+/* Bring the "active" button to the front */
+.btn-group > .btn:hover,
+        .btn-group > .btn:focus,
+        .btn-group > .btn:active,
+        .btn-group > .btn.active,
+        .btn-group-vertical > .btn:hover,
+        .btn-group-vertical > .btn:focus,
+        .btn-group-vertical > .btn:active,
+        .btn-group-vertical > .btn.active {
+            z-index: 2;
+        }
+/* Prevent double borders when buttons are next to each other */
+.btn-group .btn + .btn,
+    .btn-group .btn + .btn-group,
+    .btn-group .btn-group + .btn,
+    .btn-group .btn-group + .btn-group {
+        margin-left: -1px;
+    }
+/* Optional: Group multiple button groups together for a toolbar */
+.btn-toolbar {
+    margin-left: -5px; /* Offset the first child's margin */
+
+    &:before,
+    &:after {
+        content: ' '; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+.btn-toolbar .btn,
+    .btn-toolbar .btn-group,
+    .btn-toolbar .input-group {
+        float: left;
+    }
+.btn-toolbar > .btn,
+    .btn-toolbar > .btn-group,
+    .btn-toolbar > .input-group {
+        margin-left: 5px;
+    }
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+}
+/* Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match */
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    }
+/* Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it */
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+/* Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group) */
+.btn-group > .btn-group {
+    float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+    .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    }
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+/* On active and open, don't show outline */
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+    outline: 0;
+}
+/* Sizing */
+/* */
+/* Remix the default button sizing classes into new ones for easier manipulation. */
+/* .btn-group-xs > .btn { @extend .btn-xs; } */
+/* .btn-group-sm > .btn { @extend .btn-sm; } */
+/* .btn-group-lg > .btn { @extend .btn-lg; } */
+/* Split button dropdowns */
+/* ---------------------- */
+/* Give the line between buttons some depth */
+.btn-group > .btn + .dropdown-toggle {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+/* The clickable button for toggling the menu */
+/* Remove the gradient and set the same inset shadow as the :active state */
+.btn-group.open .dropdown-toggle { /* iOS <4.3 & Android <4.1 */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+/* Show no shadow for `.btn-link` since it has no other button styles. */
+.btn-group.open .dropdown-toggle.btn-link { /* iOS <4.3 & Android <4.1 */
+    box-shadow: none;
+    }
+/* Reposition the caret */
+.btn .caret {
+    margin-left: 0;
+}
+/* Carets in other button sizes */
+.btn-lg .caret {
+    border-width: 5px 5px 0;
+    border-bottom-width: 0;
+}
+/* Upside down carets for .dropup */
+.dropup .btn-lg .caret {
+    border-width: 0 5px 5px;
+}
+/* Vertical button groups */
+/* ---------------------- */
+.btn-group-vertical > .btn,
+    .btn-group-vertical > .btn-group,
+    .btn-group-vertical > .btn-group > .btn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+/* Clear floats so dropdown menus can be properly placed */
+.btn-group-vertical > .btn-group {
+
+    &:before,
+    &:after {
+        content: ' '; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+    }
+.btn-group-vertical > .btn-group > .btn {
+            float: none;
+        }
+.btn-group-vertical > .btn + .btn,
+    .btn-group-vertical > .btn + .btn-group,
+    .btn-group-vertical > .btn-group + .btn,
+    .btn-group-vertical > .btn-group + .btn-group {
+        margin-top: -1px;
+        margin-left: 0;
+    }
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    }
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+}
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+    .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+/* Justified button groups */
+/* ---------------------- */
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+.btn-group-justified > .btn,
+    .btn-group-justified > .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+.btn-group-justified > .btn-group .btn {
+        width: 100%;
+    }
+.btn-group-justified > .btn-group .dropdown-menu {
+        left: auto;
+    }
+/* Checkbox and radio options */
+/* */
+/* In order to support the browser's form validation feedback, powered by the */
+/* `required` attribute, we have to "hide" the inputs via `clip`. We cannot use */
+/* `display: none;` or `visibility: hidden;` as that also hides the popover. */
+/* Simply visually hiding the inputs via `opacity` would leave them clickable in */
+/* certain cases which is prevented by using `clip` and `pointer-events`. */
+/* This way, we ensure a DOM element is visible to position the popover from. */
+/* */
+/* See https:/*github.com/twbs/bootstrap/pull/12794 and */
+/* https:/*github.com/twbs/bootstrap/pull/14559 for more information. */
+[data-toggle='buttons'] > .btn input[type='radio'],
+        [data-toggle='buttons'] > .btn input[type='checkbox'],
+        [data-toggle='buttons'] > .btn-group > .btn input[type='radio'],
+        [data-toggle='buttons'] > .btn-group > .btn input[type='checkbox'] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            pointer-events: none;
+        }
+body{
+  font-family: helvetica;
+}
+.mq-body {
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: var(--mq-color-grey90);
+  font-family: HelveticaNeue, Helvetica, Arial;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
