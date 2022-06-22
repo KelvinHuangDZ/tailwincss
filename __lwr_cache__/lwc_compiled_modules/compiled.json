@@ -138,7 +138,7 @@
   [
     "mq/app#app.html@0.0.1",
     {
-      "ownHash": "30de3ae3c2d94c91db4717d225365143",
+      "ownHash": "077dd25f086be052e924163b44b4ebaf",
       "module": "./cache/mq_app_app_html_0_0_1.js",
       "moduleMeta": "./cache/mq_app_app_html_0_0_1.meta.json"
     }
